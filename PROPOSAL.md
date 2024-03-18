@@ -94,3 +94,21 @@ Road Map to Finish
 - Polish styling and test
 
 * PRESENT PROJECT*
+
+Player turn
+1. Initialize turn
+    - award troops
+    - set event listeners to place
+    - place troops
+    - next
+2. Attack
+    - set event listeners for selecting starting territory
+    - select territory and confirm
+    - set event listeners to target territory
+    - select territory and confirm
+    - calculate attack and troop losses
+    - repeat attack, attack somewhere else, or move on
+3. Move troops
+    - select starting territory, confirm
+    - select destination territory, confirm
+    - pass turn

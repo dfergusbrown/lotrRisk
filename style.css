@@ -1,0 +1,72 @@
+
+
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.4fr 0.9fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mapArea"
+      "infoBar";
+    height: 100vh;
+    margin: 0;
+}
+  
+.mapArea { 
+    grid-area: mapArea;
+    background-color: slategray;
+    width: 100vw;
+    overflow: scroll;
+    position: relative;
+}
+
+.mapArea img {
+    height: 100%;
+}
+
+#zoom-controls {
+    position: absolute;  /* Position buttons within container */
+    top: 10px;  /* Adjust button placement as needed */
+    right: 10px;
+    display: flex;
+    flex-direction: column;  /* Stack buttons vertically */
+    margin: 5px;
+}
+
+#zoom-controls button {
+    padding: 5px;
+    margin: 3px;
+    background-color: black;
+    color: white;
+}
+  
+.infoBar {
+    grid-area: infoBar;
+    background-color: darkslategray;
+    border-top: solid 10px black;
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2.4fr 0.9fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "mapArea"
+          "infoBar";
+        height: 100vh;
+        margin: 0;
+    }
+
+    .mapArea { 
+        width: 100vw;
+        height:unset;
+        overflow: scroll;
+    }
+    .mapArea > img {
+        height: unset;
+        
+    }
+}
