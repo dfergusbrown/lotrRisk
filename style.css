@@ -1,27 +1,28 @@
 
-
 .container {  display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2.4fr 0.9fr;
+    grid-template-rows: 1fr;
+    /* grid-template-rows: 2.4fr 0.9fr; */
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "mapArea"
-      "infoBar";
+      "mapArea";
+      /* "infoBar"; */
     height: 100vh;
     margin: 0;
 }
-  
+
 .mapArea { 
     grid-area: mapArea;
     background-color: slategray;
     width: 100vw;
+    height: 100vh;
     overflow: scroll;
     position: relative;
 }
 
 .mapArea img {
-    height: 100%;
+    width: 100%;
 }
 
 #zoom-controls {
@@ -40,11 +41,11 @@
     color: white;
 }
   
-.infoBar {
+/* .infoBar {
     grid-area: infoBar;
     background-color: darkslategray;
     border-top: solid 10px black;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
     .container {  
@@ -62,7 +63,7 @@
 
     .mapArea { 
         width: 100vw;
-        height:unset;
+        height: 100vh;
         overflow: scroll;
     }
     .mapArea > img {
